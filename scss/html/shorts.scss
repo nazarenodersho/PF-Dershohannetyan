@@ -1,0 +1,50 @@
+#tituloShorts{
+    color: black;
+    @extend %texto-alineado;
+    #span-verano{
+        @include estilo-drip;
+        font-size: 2.5rem;
+        font-family: $segunda-font;
+    }
+}
+
+#shortsGrid{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+    .imgShorts{
+        @include imagen-general;
+    }
+    .short-uno, .short-dos, .short-tres, .short-cuatro{
+        text-align: center;
+    } 
+}
+
+/* mq tablet */
+@media screen and (min-width:600px) {
+    #shortsGrid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
+}
+
+/*mq desktop */
+@media screen and (min-width:1024px) {
+    #shortsGrid{
+        @include main-desktop;
+        .imgShorts{
+            width: 15rem;
+            height: 15rem;
+        }
+        .short-uno:hover, .short-dos:hover, .short-tres:hover, .short-cuatro:hover{
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        .short-uno, .short-dos, .short-tres, .short-cuatro{
+            transition: 0.5s;
+        }
+    }
+}

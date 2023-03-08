@@ -1,0 +1,403 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+footer #derechos, footer #redes, footer #redesLogos, #tituloOferta, #tituloBuzos, #tituloCargo, #tituloRemeras, #tituloShorts, #tituloAccesorios {
+  display: flex;
+  justify-content: center;
+  text-align: center; }
+
+#bodyGeneral {
+  background-color: white;
+  font-family: 'Heebo', sans-serif; }
+
+/* header y footer */
+header {
+  background-color: #ffea00;
+  margin: 20px; }
+  header nav img {
+    height: 7rem;
+    width: 7rem; }
+  header nav ul li .dropdown-menu {
+    text-align: center; }
+
+footer {
+  padding: 10px;
+  margin: 20px;
+  background-color: #ffea00; }
+  footer #banner {
+    display: flex;
+    justify-content: center; }
+    footer #banner img {
+      height: 3.5rem;
+      width: 20rem; }
+  footer #derechos {
+    text-decoration: underline; }
+    footer #derechos h2 {
+      font-size: 0.8rem;
+      color: black;
+      opacity: 0.7; }
+    footer #derechos #img-vs {
+      display: none; }
+  footer #redes {
+    text-decoration: underline; }
+    footer #redes h2 {
+      font-size: 0.8rem;
+      color: black;
+      opacity: 0.7; }
+  footer #redesLogos {
+    margin-bottom: 10px;
+    gap: 10px; }
+    footer #redesLogos .logosRedes {
+      width: 3rem;
+      height: 3rem; }
+
+/* mq tablet */
+@media screen and (min-width: 600px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-content: center; } }
+
+/* mq desktop */
+@media screen and (min-width: 1024px) {
+  header {
+    margin: 50px; }
+    header nav {
+      width: 800px; }
+      header nav img {
+        height: 10rem;
+        width: 10rem; }
+      header nav .collapse {
+        justify-content: end; }
+  header nav ul li:hover {
+    transform: scale(0.9);
+    transition: 0.2s; }
+  header nav ul li {
+    transition: 0.2s; }
+  footer {
+    margin-left: 50px;
+    margin-right: 50px; }
+    footer #banner {
+      justify-content: right;
+      padding-right: 60px;
+      padding-top: 20px; }
+      footer #banner img {
+        width: 20rem; }
+    footer #derechos {
+      justify-content: left;
+      padding-left: 60px; }
+      footer #derechos h2 {
+        font-family: "Shrikhand", cursive;
+        font-size: 1.3rem; }
+    footer #redes {
+      justify-content: right;
+      padding-right: 195px; }
+      footer #redes h2 {
+        font-size: 1rem; }
+    footer #redesLogos {
+      justify-content: right;
+      padding-right: 166px; } }
+
+/* Inicio */
+#tituloOferta {
+  color: black; }
+  #tituloOferta #oferta {
+    color: #ffea00;
+    text-shadow: 2.5px 2.5px black;
+    font-size: 2.5rem;
+    font-family: "Shrikhand", cursive; }
+
+.galeria {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 4rem; }
+  .galeria .imgInicio {
+    height: 12rem;
+    width: 12rem; }
+  .galeria .grid-uno, .galeria .grid-dos, .galeria .grid-tres, .galeria .grid-cuatro {
+    text-align: center; }
+  .galeria .grid-cinco, .galeria .grid-seis {
+    display: none; }
+
+/* mq tablet */
+@media screen and (min-width: 600px) {
+  .galeria {
+    grid-template-rows: 1fr 1fr 0.2fr; }
+    .galeria .grid-cinco {
+      display: inline-block;
+      grid-column: span 2;
+      text-align: center;
+      background-image: url(../img/accesoriosBanner.avif);
+      background-size: contain; }
+      .galeria .grid-cinco a {
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        height: 100px;
+        justify-content: center;
+        font-family: "Shrikhand", cursive;
+        color: #ffea00;
+        text-shadow: 2.5px 2.5px black;
+        font-size: 2rem; } }
+
+/* mq desktop */
+@media screen and (min-width: 1024px) {
+  .galeria {
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 0.2fr; }
+    .galeria .imgInicio {
+      width: 15rem;
+      height: 15rem; }
+    .galeria .grid-cinco {
+      grid-column: span 2;
+      background-size: contain; }
+    .galeria .grid-seis {
+      display: inline-block;
+      grid-column: span 2;
+      background-color: black;
+      text-align: center; }
+      .galeria .grid-seis a {
+        align-items: center;
+        display: flex;
+        height: 100px;
+        justify-content: center;
+        font-family: "Shrikhand", cursive;
+        font-size: 2rem;
+        color: whitesmoke;
+        text-decoration: underline whitesmoke; }
+    .galeria .grid-uno:hover, .galeria .grid-dos:hover, .galeria .grid-tres:hover, .galeria .grid-cuatro:hover, .galeria .grid-cinco:hover, .galeria .grid-seis:hover {
+      transform: scale(1.1);
+      transition: 0.5s; }
+    .galeria .grid-uno, .galeria .grid-dos, .galeria .grid-tres, .galeria .grid-cuatro, .galeria .grid-cinco, .galeria .grid-seis {
+      transition: 0.5s; } }
+
+/* Buzos */
+#tituloBuzos {
+  color: black; }
+  #tituloBuzos #vieja-scul {
+    color: #ffea00;
+    text-shadow: 2.5px 2.5px black;
+    font-size: 2.5rem;
+    font-family: "Shrikhand", cursive; }
+
+#buzosGrid {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2rem; }
+  #buzosGrid .imgBuzos {
+    height: 12rem;
+    width: 12rem; }
+  #buzosGrid .buzo-uno, #buzosGrid .buzo-dos, #buzosGrid .buzo-tres, #buzosGrid .buzo-cuatro {
+    text-align: center; }
+
+@media screen and (min-width: 600px) {
+  #buzosGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); } }
+
+@media screen and (min-width: 1024px) {
+  #buzosGrid {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr; }
+    #buzosGrid .imgBuzos {
+      width: 15rem;
+      height: 15rem; }
+    #buzosGrid .buzo-uno:hover, #buzosGrid .buzo-dos:hover, #buzosGrid .buzo-tres:hover, #buzosGrid .buzo-cuatro:hover {
+      transform: scale(1.1);
+      transition: 0.5s; }
+    #buzosGrid .buzo-uno, #buzosGrid .buzo-dos, #buzosGrid .buzo-tres, #buzosGrid .buzo-cuatro {
+      transition: 0.5s; } }
+
+/* Pantalones */
+#tituloCargo {
+  color: black; }
+  #tituloCargo #span-cargo {
+    color: #ffea00;
+    text-shadow: 2.5px 2.5px black;
+    font-size: 2.5rem;
+    font-family: "Shrikhand", cursive; }
+
+#cargoGrid {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2rem; }
+  #cargoGrid .imgCargo {
+    height: 12rem;
+    width: 12rem; }
+  #cargoGrid .cargo-uno, #cargoGrid .cargo-dos, #cargoGrid .cargo-tres, #cargoGrid .cargo-cuatro {
+    text-align: center; }
+
+/* mq tablet */
+@media screen and (min-width: 600px) {
+  #cargoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); } }
+
+/* mq desktop */
+@media screen and (min-width: 1024px) {
+  #cargoGrid {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr; }
+    #cargoGrid .imgCargo {
+      width: 15rem;
+      height: 15rem; }
+    #cargoGrid .cargo-uno:hover, #cargoGrid .cargo-dos:hover, #cargoGrid .cargo-tres:hover, #cargoGrid .cargo-cuatro:hover {
+      transform: scale(1.1);
+      transition: 0.5s; }
+    #cargoGrid .cargo-uno, #cargoGrid .cargo-dos, #cargoGrid .cargo-tres, #cargoGrid .cargo-cuatro {
+      transition: 0.5s; } }
+
+/*Remeras */
+#tituloRemeras {
+  color: black; }
+  #tituloRemeras #oversize {
+    color: #ffea00;
+    text-shadow: 2.5px 2.5px black;
+    font-size: 2.5rem;
+    font-family: "Shrikhand", cursive; }
+
+#remerasGrid {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2rem; }
+  #remerasGrid .imgRemeras {
+    height: 12rem;
+    width: 12rem; }
+  #remerasGrid .remera-uno, #remerasGrid .remera-dos, #remerasGrid .remera-tres, #remerasGrid .remera-cuatro {
+    text-align: center; }
+
+/* mq tablet */
+@media screen and (min-width: 600px) {
+  #remerasGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); } }
+
+/* mq desktop */
+@media screen and (min-width: 1024px) {
+  #remerasGrid {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr; }
+    #remerasGrid .imgRemeras {
+      width: 15rem;
+      height: 15rem; }
+    #remerasGrid .remera-uno:hover, #remerasGrid .remera-dos:hover, #remerasGrid .remera-tres:hover, #remerasGrid .remera-cuatro:hover {
+      transform: scale(1.1);
+      transition: 0.5s; }
+    #remerasGrid .remera-uno, #remerasGrid .remera-dos, #remerasGrid .remera-tres, #remerasGrid .remera-cuatro {
+      transition: 0.5s; } }
+
+/* Shorts */
+#tituloShorts {
+  color: black; }
+  #tituloShorts #span-verano {
+    color: #ffea00;
+    text-shadow: 2.5px 2.5px black;
+    font-size: 2.5rem;
+    font-family: "Shrikhand", cursive; }
+
+#shortsGrid {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2rem; }
+  #shortsGrid .imgShorts {
+    height: 12rem;
+    width: 12rem; }
+  #shortsGrid .short-uno, #shortsGrid .short-dos, #shortsGrid .short-tres, #shortsGrid .short-cuatro {
+    text-align: center; }
+
+/* mq tablet */
+@media screen and (min-width: 600px) {
+  #shortsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); } }
+
+/*mq desktop */
+@media screen and (min-width: 1024px) {
+  #shortsGrid {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr; }
+    #shortsGrid .imgShorts {
+      width: 15rem;
+      height: 15rem; }
+    #shortsGrid .short-uno:hover, #shortsGrid .short-dos:hover, #shortsGrid .short-tres:hover, #shortsGrid .short-cuatro:hover {
+      transform: scale(1.1);
+      transition: 0.5s; }
+    #shortsGrid .short-uno, #shortsGrid .short-dos, #shortsGrid .short-tres, #shortsGrid .short-cuatro {
+      transition: 0.5s; } }
+
+/* Accesorios */
+#tituloAccesorios {
+  color: black; }
+  #tituloAccesorios #outfit {
+    color: #ffea00;
+    text-shadow: 2.5px 2.5px black;
+    font-size: 2.5rem;
+    font-family: "Shrikhand", cursive; }
+
+#accesoriosGrid {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2rem; }
+  #accesoriosGrid .imgAcc {
+    height: 12rem;
+    width: 12rem; }
+  #accesoriosGrid .acc-uno, #accesoriosGrid .acc-dos, #accesoriosGrid .acc-tres, #accesoriosGrid .acc-cuatro {
+    text-align: center; }
+
+/* mq tablet */
+@media screen and (min-width: 600px) {
+  #accesoriosGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); } }
+
+/* mq desktop */
+@media screen and (min-width: 1024px) {
+  #accesoriosGrid {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr; }
+    #accesoriosGrid .imgAcc {
+      width: 15rem;
+      height: 15rem; }
+    #accesoriosGrid .acc-uno:hover, #accesoriosGrid .acc-dos:hover, #accesoriosGrid .acc-tres:hover, #accesoriosGrid .acc-cuatro:hover {
+      transform: scale(1.1);
+      transition: 0.5s; }
+    #accesoriosGrid .acc-uno, #accesoriosGrid .acc-dos, #accesoriosGrid .acc-tres, #accesoriosGrid .acc-cuatro {
+      transition: 0.5s; } }

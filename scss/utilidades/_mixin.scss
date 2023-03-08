@@ -1,0 +1,25 @@
+@mixin imagen-general{
+    height: 12rem;
+    width: 12rem;
+}
+
+@mixin estilo-drip{
+        color: rgb(255, 234, 0);
+        text-shadow: 2.5px 2.5px black;
+}
+
+@mixin centrado{
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+}
+
+@mixin main-desktop{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+}

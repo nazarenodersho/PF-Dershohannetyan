@@ -1,0 +1,47 @@
+#tituloBuzos{
+    color: black;
+    @extend %texto-alineado;
+    #vieja-scul{
+        @include estilo-drip;
+        font-size: 2.5rem;
+        font-family: $segunda-font;
+    }
+}
+
+#buzosGrid{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+    .imgBuzos{
+        @include imagen-general;
+    }
+    .buzo-uno, .buzo-dos, .buzo-tres, .buzo-cuatro{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:600px) {
+    #buzosGrid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #buzosGrid{
+       @include main-desktop;
+        .imgBuzos{
+            width: 15rem;
+            height: 15rem;
+        }
+    .buzo-uno:hover, .buzo-dos:hover, .buzo-tres:hover, .buzo-cuatro:hover{
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    .buzo-uno, .buzo-dos, .buzo-tres, .buzo-cuatro{
+        transition: 0.5s;
+    }
+    }   
+}

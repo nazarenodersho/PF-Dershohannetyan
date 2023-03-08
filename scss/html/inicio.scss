@@ -1,0 +1,88 @@
+#tituloOferta{
+    @extend %texto-alineado;
+    color: black;
+    #oferta{
+    @include estilo-drip;
+    font-size: 2.5rem;
+    font-family: $segunda-font;
+    }
+}
+
+.galeria{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 4rem;
+    .imgInicio{
+        @include imagen-general;
+    }
+    .grid-uno, .grid-dos, .grid-tres, .grid-cuatro{
+        text-align: center;
+    }
+    .grid-cinco, .grid-seis{
+        display: none;
+    }
+}
+
+/* mq tablet */
+@media screen and (min-width:600px){
+    .galeria{
+        grid-template-rows: 1fr 1fr 0.2fr;
+        .grid-cinco{
+            display: inline-block;
+            grid-column: span 2;
+            text-align: center;
+            background-image: url(../img/accesoriosBanner.avif);
+            background-size: contain;
+            a{
+                text-decoration: none;
+                @include centrado;
+                font-family: $segunda-font;
+                @include estilo-drip;
+                font-size: 2rem; 
+            }
+           
+        }
+    }
+}
+
+/* mq desktop */
+@media screen and (min-width:1024px){
+    .galeria{
+        margin-left: 50px;
+        margin-right: 50px;
+        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 0.2fr;
+        .imgInicio{
+            width: 15rem;
+            height: 15rem;
+        }
+        .grid-cinco{
+            grid-column: span 2;
+            background-size: contain;
+        }
+        .grid-seis{
+            display: inline-block;
+            grid-column: span 2;
+            background-color: black;
+            text-align: center;
+            a{
+                @include centrado;
+                font-family: $segunda-font;
+                font-size: 2rem;
+                color: whitesmoke;
+                text-decoration: underline whitesmoke;
+            }
+           
+        }
+    .grid-uno:hover, .grid-dos:hover, .grid-tres:hover, .grid-cuatro:hover, .grid-cinco:hover, .grid-seis:hover{
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+    .grid-uno, .grid-dos, .grid-tres, .grid-cuatro, .grid-cinco, .grid-seis{
+        transition: 0.5s;
+    }
+    }
+}

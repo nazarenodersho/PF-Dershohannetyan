@@ -1,0 +1,170 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// import de utilidades
+@import "utilidades/variables";
+@import "utilidades/mixin";
+@import "utilidades/extend";
+
+
+#bodyGeneral{
+    background-color: white;
+    font-family: 'Heebo', sans-serif;
+}
+
+/* header y footer */
+
+header{
+    background-color: rgb(255, 234, 0);
+    margin: 20px;
+    nav{
+        img{
+            height: 7rem;
+            width: 7rem;
+        }
+        ul{
+            li{
+                .dropdown-menu{
+                    text-align: center;
+                    
+                }
+            }
+        }
+        
+    }
+}
+
+footer{
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(255, 234, 0);
+    #banner{
+        display: flex;
+        justify-content: center;
+        img{
+            height: 3.5rem;
+            width: 20rem;
+        }
+    }
+    #derechos{
+        @extend %texto-alineado;
+        text-decoration: underline;
+        h2{
+            font-size: 0.8rem;
+            color: black;
+            opacity: 0.7;
+        }
+        #img-vs{
+            display: none;
+        }
+        }
+    #redes{
+        @extend %texto-alineado;
+        text-decoration: underline;
+        h2{
+            font-size: 0.8rem;
+            color: black;
+            opacity: 0.7;
+        }
+        }
+    #redesLogos{
+        @extend %texto-alineado;
+        margin-bottom: 10px;
+        gap: 10px;
+        .logosRedes{
+        width: 3rem;
+        height: 3rem;
+        }
+    }
+}
+
+/* mq tablet */
+@media screen and (min-width:600px){
+    header{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+}
+
+/* mq desktop */
+@media screen and (min-width:1024px) {
+    header{
+        margin: 50px;
+        nav{
+            width: 800px;
+            img{
+                height: 10rem;
+                width: 10rem;
+            }
+            .collapse{
+                justify-content: end;
+            }
+        }
+    }
+
+    header nav ul li:hover{
+        transform: scale(0.9);
+        transition: 0.2s;
+    }
+    header nav ul li{
+        transition: 0.2s;
+    }
+    
+    footer{
+        margin-left: 50px;
+        margin-right: 50px;
+        #banner{
+            justify-content: right;
+            padding-right: 60px;
+            padding-top: 20px;
+            img{
+                width: 20rem;
+            }
+        }
+        #derechos{
+            justify-content: left;
+            padding-left: 60px;
+            h2{
+                font-family: $segunda-font;
+                font-size: 1.3rem;
+            }
+        }
+        #redes{
+            justify-content: right;
+            padding-right: 195px;
+            h2{
+                font-size: 1rem;
+            }
+        }
+        #redesLogos{
+            justify-content: right;
+            padding-right: 166px;
+        }
+    }
+}
+
+// import de estilos de los html
+
+/* Inicio */
+@import "html/inicio.scss";
+
+/* Buzos */
+@import "html/buzos.scss";
+
+/* Pantalones */
+@import "html/pantalones.scss";
+
+/*Remeras */
+@import "html/remeras.scss";
+
+/* Shorts */
+@import "html/shorts.scss";
+
+/* Accesorios */
+@import "html/accesorios.scss";
